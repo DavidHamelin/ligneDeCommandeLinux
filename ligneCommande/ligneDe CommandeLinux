@@ -1,0 +1,178 @@
+
+*** Exercice ligne de commande - Partie 1 ***
+
+	Exercice 1
+Afficher le manuel pour la commande ls
+
+ls --help
+man ls
+quitter : "q"
+
+
+	Exercice 2
+Afficher le contenu du dossier courant
+
+ls
+
+
+	Exercice 3
+Afficher le contenu du dossier courant avec les fichiers cachés
+
+ls -a
+
+
+	Exercice 4
+Afficher le contenu du dossier courant version longue sans les fichiers cachés
+
+ls-l
+ls -lh
+
+
+	Exercice 5
+Afficher le contenu du dossier courant version longue avec les fichiers cachés
+
+ls -Al
+
+
+	Exercice 6
+Afficher le chemin du dossier courant
+
+pwd
+
+
+	Exercice 7
+Se déplacer dans le dossier Documents
+
+cd Documents
+
+
+	Exercice 8
+Afficher le contenu de ce dossier
+
+ls
+
+
+
+
+*** Exercice Ligne de commande - Partie 2 ***
+
+	Exercice 1
+Se mettre en super utilisateur
+
+sudo -i ou sudo -s (mode root)
+
+
+	Exercice 2
+Mettre à jour la liste des paquets
+
+sudo apt-get update
+
+
+	Exercice 3
+Mettre à jour les paquets
+
+sudo apt-get upgrade
+
+
+	Exercice 4
+Trouver tous les paquets contenant le mot XML
+
+find chemin/du/repertoire/ -name "*.xml"
+
+
+	Exercice 5
+Installer le paquet git
+
+sudo apt-get install git
+
+
+	Exercice 6
+Avec le navigateur, télécharger le .deb à l'adresse https://atom.io/ . Avec la ligne de commande, se déplacer dans le dossier Téléchargement. Lancer l'installation du .deb nouvellement téléchargé.
+
+sudo dpkg -i package_file.deb
+
+
+
+
+*** Exercice Ligne de commande - Partie 3 ***
+
+	Exercice 1
+Créer un dossier website dans le dossier Document
+
+mkdir website
+
+
+	Exercice 2
+Créer un dossier et un sous dossier en une seule ligne de commande dans le dossier website : Memento/assets
+
+En étant positionné dans Documents :
+cd website && mkdir -p Memento/assets
+
+
+	Exercice 3
+Se déplacer dans le dossier nouvellement créé et faire trois nouveaux dossiers en une seule ligne de commande : css, img, js
+
+cd Memento/assets/ && mkdir css img js
+
+
+	Exercice 4
+Dans le dossier Memento créer le fichier style.css
+
+cd
+cd Documents/website/Memento/
+touch style.css
+
+
+	Exercice 5
+Dans le dossier Memento créer un fichier index.html et copier/coller ceci dedans :
+
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mon Mémento</title>
+  </head>
+  <body>
+    <h1>La ligne de commande</h1>
+    <h2>Gestion de documents</h2>
+    <p>Pour créer un dossier je dois utiliser cette commande : </p>
+    <pre><code></code></pre>
+  </body>
+</html>
+
+premier essai :
+cd Documents/website/Memento/
+echo -e "<\!DOCTYPE html> \n <html> \n \t <head> \n \t\t  <meta charset="utf-8"> \n \t\t  <link rel="stylesheet" href="assets/css/style.css"> \n \t\t  <title>Mon Mémento</title> \n \t </head> \n \t <body> \n \t\t <h1>La ligne de commande</h1> \n \t\t <h2>Gestion de documents</h2> \n \t\t <p>Pour créer un dossier je dois utiliser cette commande : </p> \n \t\t <pre><code></code></pre> \n \t </body> \n </html>" > index.html
+
+!!! utiliser cat pour ecrire texte dans console !!!
+cd Documents/website/Memento/
+
+cat > index.html 
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mon Mémento</title>
+  </head>
+  <body>
+    <h1>La ligne de commande</h1>
+    <h2>Gestion de documents</h2>
+    <p>Pour créer un dossier je dois utiliser cette commande : </p>
+    <pre><code></code></pre>
+  </body>
+</html>
+
+CTRL + Z
+
+
+
+	Exercice 6
+Déplacer le fichier style.css dans le dossier css du dossier assets
+
+mv style.css ~/Documents/website/Memento/assets/css/
+
+
+
+
